@@ -10,10 +10,10 @@
 </template>
 
 <script>
-    import Login from "./customs/Login";
-    import Home from "./routes/Home";
-    import Header from "./customs/Header";
-    import Footer from "./customs/Footer";
+    import Login from "./custom/Login";
+    import Home from "./views/Home";
+    import Header from "./custom/Header";
+    import Footer from "./custom/Footer";
     export default {
         name: "index",
         components: {Footer, Header, Home, Login},

@@ -17,13 +17,13 @@
 </template>
 
 <script>
-    import Header from "../customs/Header";
-    import Card from "../customs/Card";
-    import Footer from "../customs/Footer";
-    import Form from "../customs/Form";
-    const OverlayNotification = import ( "../customs/OverlayNotification");
-    import OverlayLoading from "../customs/OverlayLoading";
-    import OverlayLoadingError from "../customs/OverlayLoadingError";
+    import Header from "../custom/Header";
+    import Card from "../custom/Card";
+    import Footer from "../custom/Footer";
+    import Form from "../custom/Form";
+    const OverlayNotification = import ( "../custom/OverlayNotification");
+    import OverlayLoading from "../custom/OverlayLoading";
+    import OverlayLoadingError from "../custom/OverlayLoadingError";
     export default {
         name: "Home",
         components: {

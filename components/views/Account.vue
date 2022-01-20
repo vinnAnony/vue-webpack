@@ -6,8 +6,8 @@
 </template>
 
 <script>
-    import Login from "../customs/Login";
-    import SignUp from "../customs/SignUp";
+    import Login from "../custom/Login";
+    import SignUp from "../custom/SignUp";
     export default {
         name: "Account",
         components: {

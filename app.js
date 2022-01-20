@@ -5,10 +5,10 @@ Vue.use(VueRouter);
  require('./components');
  require('./assets/scss/app.scss');
 
-import Home from "./components/routes/Home";
-import About from "./components/routes/About";
-import Archive from "./components/routes/Archive";
-import Account from "./components/routes/Account";
+import Home from "./components/views/Home";
+import About from "./components/views/About";
+import Archive from "./components/views/Archive";
+import Account from "./components/views/Account";
 
 
 const routes = [
