@@ -12,7 +12,7 @@
 
         <Form v-if="showModal" @close="showModal = false"/>
 
-        <OverlayNotification/>
+<!--        <OverlayNotification/>-->
     </div>
 </template>
 
