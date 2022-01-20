@@ -1,12 +1,44 @@
 <template>
-    <button class="ff border border-white px-4 py-1 from-indigo-600 to-purple-600 hover:bg-indigo-500 rounded-md text-white text-xl float">
-        <slot>Create Recipe</slot>
-    </button>
+    <div>
+        <Header app-name="Hot Notes" />
+        <router-view>
+
+        </router-view>
+
+        <Footer/>
+    </div>
 </template>
 
 <script>
+    import Login from "./customs/Login";
+    import Home from "./routes/Home";
+    import Header from "./customs/Header";
+    import Footer from "./customs/Footer";
     export default {
-        name: "index"
+        name: "index",
+        components: {Footer, Header, Home, Login},
+        data(){
+          return {
+              notes: 6,
+          }
+        },
+
+        beforeCreate() {
+            console.log('beforeCreate hook has been called');
+        },
+        created() {
+            console.log(`Created hook : Notes is of type ${typeof this.notes}`);
+        },
+        beforeMount() {
+            console.log('beforeMount hook called')
+        },
+        mounted() {
+            console.log('mounted has been called');
+        },
+        beforeUpdate(){
+            console.log('beforeUpdate hook has been called');
+        },
+
     }
 </script>
 
