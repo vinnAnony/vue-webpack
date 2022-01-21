@@ -16,6 +16,7 @@
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.8",
     "autoprefixer": "^9.8.8",
+    "axios": "^0.25.0",
     "babel-loader": "^8.2.3",
     "core-js": "^3.20.3",
     "css-loader": "^6.5.1",
@@ -38,6 +39,7 @@
   },
   "dependencies": {
     "express": "^4.17.2",
-    "serve-static": "^1.14.2"
+    "serve-static": "^1.14.2",
+    "vuex": "^3.6.2"
   }
 }

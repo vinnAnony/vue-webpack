@@ -9,7 +9,8 @@
                 <router-link to="/home"><Button>Home</Button></router-link>
                 <router-link to="/about"><Button>About</Button></router-link>
                 <router-link to="/archive"><Button>Archive</Button></router-link>
-                <router-link to="/account"><Button>Account</Button></router-link>
+                <router-link v-if="!authState.loggedIn" to="/account"><Button>Account</Button></router-link>
+                <Button @clicked="logOut">Logout</Button>
             </div>
 
         </div>
@@ -19,12 +20,24 @@
 
 <script>
     import Button from "./Button";
+    import {mapGetters} from "vuex";
     export default {
         name: "Header",
         components: {
             Button
         },
-        props: ['appName']
+        props: ['appName'],
+        methods: {
+            logOut(){
+                this.$router.push('/');
+                this.$store.dispatch('auth/logout');
+            }
+        },
+        computed:{
+            ...mapGetters('auth', {
+                authState: 'authState'
+            })
+        },
     }
 </script>
 

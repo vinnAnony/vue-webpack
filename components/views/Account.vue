@@ -15,7 +15,7 @@
         },
         data(){
             return {
-                accountView: 'SignUp'
+                accountView: 'Login'
             }
         },
         methods: {

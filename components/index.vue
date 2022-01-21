@@ -1,11 +1,11 @@
 <template>
     <div>
-        <Header app-name="Hot Notes" />
+        <Header v-if="authState.loggedIn" app-name="Hot Notes" />
         <router-view>
 
         </router-view>
 
-        <Footer/>
+        <Footer v-if="authState.loggedIn"/>
     </div>
 </template>
 
@@ -14,31 +14,26 @@
     import Home from "./views/Home";
     import Header from "./custom/Header";
     import Footer from "./custom/Footer";
+    import {mapGetters} from "vuex";
     export default {
         name: "index",
         components: {Footer, Header, Home, Login},
         data(){
           return {
               notes: 6,
+              showHeaderFooter: true,
           }
         },
-
-        beforeCreate() {
-            console.log('beforeCreate hook has been called');
+        computed:{
+            ...mapGetters('auth', {
+                authState: 'authState'
+            })
         },
-        created() {
-            console.log(`Created hook : Notes is of type ${typeof this.notes}`);
+        methods: {
+            hideHeaderFooter(){
+                this.showHeaderFooter = false;
+            }
         },
-        beforeMount() {
-            console.log('beforeMount hook called')
-        },
-        mounted() {
-            console.log('mounted has been called');
-        },
-        beforeUpdate(){
-            console.log('beforeUpdate hook has been called');
-        },
-
     }
 </script>
 
